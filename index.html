@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>CASE #001 — OMA | Bocconi Urban Campus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    header {
+      grid-column: span 2;
+      border-bottom: 1px solid #000;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    header h1 {
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    header .case {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .scheda {
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .scheda div {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .scheda span {
+      width: 100px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .testo {
+      font-size: 14px;
+      max-width: 520px;
+    }
+
+    .testo p {
+      margin-bottom: 24px;
+      text-align: justify;
+    }
+
+    .media {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .media img {
+      width: 100%;
+      display: block;
+    }
+
+    .caption {
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+
+    footer {
+      grid-column: span 2;
+      margin-top: 80px;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .testo {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <h1>OMA PROJECT FOR BOCCONI</h1>
+      <div class="case">CASE #001 — IL RIFERIMENTO</div>
+    </header>
+
+    <div class="scheda">
+      <div><span>Nome</span> Bocconi Urban Campus</div>
+      <div><span>Luogo</span> Milano</div>
+      <div><span>Anno</span> 2012</div>
+      <div><span>Studio</span> OMA</div>
+      <div><span>Cliente</span> Università Bocconi</div>
+      <div><span>Stato</span> Proposta progettuale</div>
+    </div>
+
+    <div class="testo">
+      <p>
+        Nel progetto per il Bocconi Urban Campus, OMA interpreta il campus
+        universitario come un’infrastruttura urbana capace di mettere in scena
+        le relazioni tra apprendimento, vita quotidiana e città. L’architettura
+        non viene concepita come un organismo unitario, ma come una composizione
+        di volumi e programmi che costruisce un “palcoscenico” per l’interazione
+        tra attività accademiche, spazi pubblici e flussi urbani.
+      </p>
+
+      <p>
+        Il complesso si organizza attorno a un vuoto centrale che assume il ruolo
+        di dispositivo di connessione più che di semplice spazio aperto. Due
+        insiemi interdipendenti — la scuola di management, di carattere
+        estroverso, e la residenza per studenti, più introversa — definiscono un
+        sistema di polarità che struttura il progetto non per simmetria formale,
+        ma per relazioni d’uso e di attraversamento.
+      </p>
+    </div>
+
+    <div class="media">
+      <div>
+        <img src="images/oma-bocconi-masterplan.jpg" alt="Masterplan del campus OMA">
+        <div class="caption">Masterplan del campus — OMA Office Work Search</div>
+      </div>
+
+      <div>
+        <img src="images/oma-bocconi-cortile.jpg" alt="Render del cortile OMA">
+        <div class="caption">Render del cortile — OMA Office Work Search</div>
+      </div>
+    </div>
+
+    <footer>
+      <div>Trivia School Aurora — Catalogo di Casi</div>
+      <div>Riferimento → Trasformazione → Applicazione</div>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,182 +1,219 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>CASE #001 — OMA | Bocconi Urban Campus</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>OMA — Bocconi Urban Campus | Scheda del Caso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    :root {
+      --bg: #f7f7f5;
+      --text: #111;
+      --muted: #666;
+      --line: #ddd;
+      --accent: #000;
+    }
+
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
+      margin: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 80px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
     }
 
     header {
-      grid-column: span 2;
-      border-bottom: 1px solid #000;
-      padding-bottom: 20px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
+      padding: 24px 32px;
+      border-bottom: 1px solid var(--line);
     }
 
     header h1 {
-      font-size: 14px;
-      letter-spacing: 0.3em;
-      font-weight: 500;
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    header .case {
+    header .meta {
+      margin-top: 4px;
       font-size: 12px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      color: var(--muted);
     }
 
-    .scheda {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 32px;
+      padding: 32px;
+    }
+
+    /* Scheda del caso */
+    .case-sheet {
+      border-right: 1px solid var(--line);
+      padding-right: 24px;
+    }
+
+    .case-sheet h2 {
       font-size: 12px;
-      letter-spacing: 0.05em;
-    }
-
-    .scheda div {
-      display: flex;
-      margin-bottom: 10px;
-    }
-
-    .scheda span {
-      width: 100px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .testo {
-      font-size: 14px;
-      max-width: 520px;
-    }
-
-    .testo p {
       margin-bottom: 24px;
-      text-align: justify;
+      color: var(--muted);
     }
 
-    .media {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
+    .field {
+      margin-bottom: 16px;
     }
 
-    .media img {
-      width: 100%;
+    .field span {
       display: block;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .caption {
-      font-size: 11px;
-      letter-spacing: 0.05em;
-      margin-top: 8px;
+    .field strong {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* Galleria immagini */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background-color: #e0e0e0;
+      border: 1px solid var(--line);
+    }
+
+    /* Testo descrittivo */
+    .description {
+      grid-column: 1 / -1;
+      margin-top: 32px;
+      max-width: 720px;
+    }
+
+    .description h3 {
+      font-size: 12px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
+      margin-bottom: 12px;
+      color: var(--muted);
+    }
+
+    .description p {
+      font-size: 14px;
+      margin: 0;
     }
 
     footer {
-      grid-column: span 2;
-      margin-top: 80px;
+      padding: 24px 32px;
+      border-top: 1px solid var(--line);
       font-size: 11px;
-      display: flex;
-      justify-content: space-between;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      color: var(--muted);
     }
 
-    @media (max-width: 900px) {
-      .page {
+    @media (max-width: 768px) {
+      main {
         grid-template-columns: 1fr;
-        padding: 40px 30px;
       }
 
-      header {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .testo {
-        max-width: 100%;
+      .case-sheet {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        padding-right: 0;
+        padding-bottom: 24px;
       }
     }
   </style>
 </head>
-
 <body>
-  <div class="page">
 
-    <header>
-      <h1>OMA PROJECT FOR BOCCONI</h1>
-      <div class="case">CASE #001 — IL RIFERIMENTO</div>
-    </header>
+  <header>
+    <h1>OMA — Bocconi Urban Campus</h1>
+    <div class="meta">Scheda del caso — #001 · Il riferimento</div>
+  </header>
 
-    <div class="scheda">
-      <div><span>Nome</span> Bocconi Urban Campus</div>
-      <div><span>Luogo</span> Milano</div>
-      <div><span>Anno</span> 2012</div>
-      <div><span>Studio</span> OMA</div>
-      <div><span>Cliente</span> Università Bocconi</div>
-      <div><span>Stato</span> Proposta progettuale</div>
-    </div>
+  <main>
+    <!-- Scheda del caso -->
+    <section class="case-sheet">
+      <h2>Scheda del caso</h2>
 
-    <div class="testo">
-      <p>
-        Nel progetto per il Bocconi Urban Campus, OMA interpreta il campus
-        universitario come un’infrastruttura urbana capace di mettere in scena
-        le relazioni tra apprendimento, vita quotidiana e città. L’architettura
-        non viene concepita come un organismo unitario, ma come una composizione
-        di volumi e programmi che costruisce un “palcoscenico” per l’interazione
-        tra attività accademiche, spazi pubblici e flussi urbani.
-      </p>
-
-      <p>
-        Il complesso si organizza attorno a un vuoto centrale che assume il ruolo
-        di dispositivo di connessione più che di semplice spazio aperto. Due
-        insiemi interdipendenti — la scuola di management, di carattere
-        estroverso, e la residenza per studenti, più introversa — definiscono un
-        sistema di polarità che struttura il progetto non per simmetria formale,
-        ma per relazioni d’uso e di attraversamento.
-      </p>
-    </div>
-
-    <div class="media">
-      <div>
-        <img src="images/oma-bocconi-masterplan.jpg" alt="Masterplan del campus OMA">
-        <div class="caption">Masterplan del campus — OMA Office Work Search</div>
+      <div class="field">
+        <span>Nome</span>
+        <strong>Bocconi Urban Campus</strong>
       </div>
 
-      <div>
-        <img src="images/oma-bocconi-cortile.jpg" alt="Render del cortile OMA">
-        <div class="caption">Render del cortile — OMA Office Work Search</div>
+      <div class="field">
+        <span>Luogo</span>
+        <strong>Milano</strong>
       </div>
-    </div>
 
-    <footer>
-      <div>Trivia School Aurora — Catalogo di Casi</div>
-      <div>Riferimento → Trasformazione → Applicazione</div>
-    </footer>
+      <div class="field">
+        <span>Anno</span>
+        <strong>2012</strong>
+      </div>
 
-  </div>
+      <div class="field">
+        <span>Studio</span>
+        <strong>OMA</strong>
+      </div>
+
+      <div class="field">
+        <span>Cliente</span>
+        <strong>Università Bocconi</strong>
+      </div>
+
+      <div class="field">
+        <span>Stato</span>
+        <strong>Proposta progettuale</strong>
+      </div>
+    </section>
+
+    <!-- Galleria immagini -->
+    <section class="gallery">
+      <!-- Cambia i src con i nomi reali nella cartella images -->
+      <img src="images/oma-bocconi-masterplan.jpg" alt="Masterplan del campus — OMA" />
+      <img src="images/oma-bocconi-cortile.jpg" alt="Render del cortile — OMA" />
+      <img src="images/oma-bocconi-01.jpg" alt="Vista urbana del campus — OMA" />
+      <img src="images/oma-bocconi-02.jpg" alt="Relazione tra volumi e spazio pubblico — OMA" />
+    </section>
+
+    <!-- Descrizione -->
+    <section class="description">
+      <h3>Descrizione</h3>
+      <p>
+        Nel progetto per il Bocconi Urban Campus, OMA interpreta il campus universitario
+        come un’infrastruttura urbana capace di mettere in scena le relazioni tra
+        apprendimento, vita quotidiana e città. L’architettura non viene concepita come
+        un organismo unitario, ma come una composizione di volumi e programmi che
+        costruisce un “palcoscenico” per l’interazione tra attività accademiche, spazi
+        pubblici e flussi urbani.
+        <br /><br />
+        Il complesso si organizza attorno a un vuoto centrale che assume il ruolo di
+        dispositivo di connessione più che di semplice spazio aperto. Due insiemi
+        interdipendenti — la scuola di management, di carattere estroverso, e la
+        residenza per studenti, più introversa — definiscono un sistema di polarità
+        che struttura il progetto non per simmetria formale, ma per relazioni d’uso
+        e di attraversamento.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 — Catalogo di casi · Laboratorio di Teoria del Progetto · Politecnico di Torino
+  </footer>
+
 </body>
 </html>

@@ -82,6 +82,17 @@
       font-weight: 500;
     }
 
+    /* Messaggio editoriale */
+    .case-hint {
+      margin-top: 24px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--line);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
     /* Galleria immagini */
     .gallery {
       display: grid;
@@ -117,6 +128,34 @@
       margin: 0;
     }
 
+    /* Navigazione casi */
+    .case-nav {
+      grid-column: 1 / -1;
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+    }
+
+    .case-nav a {
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .case-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .case-nav .current {
+      color: var(--muted);
+      pointer-events: none;
+    }
+
     footer {
       padding: 24px 32px;
       border-top: 1px solid var(--line);
@@ -134,6 +173,11 @@
         border-bottom: 1px solid var(--line);
         padding-right: 0;
         padding-bottom: 24px;
+      }
+
+      .case-nav {
+        flex-direction: column;
+        gap: 8px;
       }
     }
   </style>
@@ -179,15 +223,20 @@
         <span>Stato</span>
         <strong>Proposta progettuale</strong>
       </div>
+
+      <!-- Messaggio -->
+      <div class="case-hint">
+        Scorri la pagina per proseguire nella sequenza dei casi
+      </div>
     </section>
 
     <!-- Galleria immagini -->
     <section class="gallery">
-  <img src="oma-001-1.jpg" alt="OMA Bocconi — immagine 1" />
-  <img src="oma-001-2.jpg" alt="OMA Bocconi — immagine 2" />
-  <img src="oma-001-3.jpg" alt="OMA Bocconi — immagine 3" />
-  <img src="oma-001-4.jpg" alt="OMA Bocconi — immagine 4" />
-</section>
+      <img src="oma-001-1.jpg" alt="OMA Bocconi — immagine 1" />
+      <img src="oma-001-2.jpg" alt="OMA Bocconi — immagine 2" />
+      <img src="oma-001-3.jpg" alt="OMA Bocconi — immagine 3" />
+      <img src="oma-001-4.jpg" alt="OMA Bocconi — immagine 4" />
+    </section>
 
     <!-- Descrizione -->
     <section class="description">
@@ -208,6 +257,18 @@
         e di attraversamento.
       </p>
     </section>
+
+    <!-- Navigazione casi (link assoluti) -->
+    <nav class="case-nav">
+      <a href="https://ugoippolito3007-wq.github.io/LTP_E/">
+        ← CASE #000 · GROUND ZERO
+      </a>
+      <span class="current">CASE #001 · IL RIFERIMENTO</span>
+      <a href="https://ugoippolito3007-wq.github.io/trivia-0.1/">
+        CASE #002 · L’APPLICAZIONE →
+      </a>
+    </nav>
+
   </main>
 
   <footer>
